@@ -132,14 +132,14 @@ def creare_image(chromosomes): #generate images from chromosomes
 
 #create some data, coeff
 chromosomes_amount = 150
-genes_amount = 200
+genes_amount = 400
 new_child_amount = 90 # n*2
 iter = 1000000000
 
 prob_of_change = 5
-max_size = 10
-min_size = 5
-pixs = 100
+max_size = 20
+min_size = 10
+pixs = 225
 
 chromosomes = []
 output_chromosomes_img = []
