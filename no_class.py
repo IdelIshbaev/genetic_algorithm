@@ -45,7 +45,7 @@ def make_child(an, fit_rate): #array of chromosomes
             if p1 <= prob_of_change:
                 p2 = random.randint(0, 10)
                 t_size = random.randint(min_size, max_size)
-                if p2+1 <= prob_of_change:
+                if p2+2 <= prob_of_change:
                     # a[i][j][0] = random.randint(0,225)
                     rand_pl = random.randint(0,1)
                     # if rand_pl == 1:
@@ -63,7 +63,7 @@ def make_child(an, fit_rate): #array of chromosomes
                         if a[i][j][0] < 0:
                             a[i][j][0] = 0
                 p2 = random.randint(0, 10)
-                if p2+1 <= prob_of_change:
+                if p2+2 <= prob_of_change:
                     # a[i][j][1] = random.randint(0,225)
                     rand_pl = random.randint(0,1)
                     # if rand_pl == 1:
@@ -81,7 +81,7 @@ def make_child(an, fit_rate): #array of chromosomes
                         if a[i][j][1] < 0:
                             a[i][j][1] = 0
                 p2 = random.randint(0, 10)
-                if p2+1 <= prob_of_change:
+                if p2+2 <= prob_of_change:
                     # a[i][j][2] = random.randint(0,225)
                     rand_pl = random.randint(0,1)
                     # if rand_pl == 1:
@@ -132,20 +132,20 @@ def creare_image(chromosomes): #generate images from chromosomes
 
 
 chromosomes_amount = 150
-genes_amount = 300
+genes_amount = 100
 new_child_amount = 90 # n*2
 iter = 1000000000
 
 prob_of_change = 5
-max_size = 40
-min_size = 30
-pixs = 512
+max_size = 20
+min_size = 10
+pixs = 225
 
 chromosomes = []
 output_chromosomes_img = []
 
 #read input image
-path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/genetic_algorithm/images/img_06.jpg'
+path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/genetic_algorithm/images/img_04.png'
 input_image = cv.imread(path)
 
 #print input image as plot
