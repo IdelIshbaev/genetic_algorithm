@@ -100,7 +100,7 @@ def creare_image(chromosomes):
 
 chromosomes_amount = 100
 genes_amount = 500
-new_child_amount = 30 # n*2
+new_child_amount = 60 # n*2
 iter = 1000000000
 
 prob_of_change = 5
@@ -112,7 +112,7 @@ chromosomes = []
 output_chromosomes_img = []
 
 #create images
-path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/images/img_03.png'
+path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/genetic_algorithm/images/img_03.png'
 input_image = cv.imread(path)
 
 plt.subplot(121)
@@ -162,6 +162,7 @@ for k in tqdm(range(iter)):
         ind_t = fit_rate.index(max(fit_rate))
         fit_rate.pop(ind_t)
         chromosomes.pop(ind_t)
+        chromosomes_img.pop(ind_t)
 
     # fit_rate.sort()
     # for i in range(len(fit_rate)):
@@ -196,7 +197,7 @@ for k in tqdm(range(iter)):
 
     if repeat_amount == 0 or fit_rate_check == 1000:
         ind_t = fit_rate.index(min_fit_rate)
-        print(mse(chromosomes_img[0], input_image))
+        print(mse(chromosomes_img[ind_t], input_image))
         plt.subplot(121)
         plt.axis("off")
         plt.imshow(cv.cvtColor(input_image, cv.COLOR_BGR2RGB))
