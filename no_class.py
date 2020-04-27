@@ -130,23 +130,24 @@ def creare_image(chromosomes): #generate images from chromosomes
         cr_chromosomes_img.append(img)
     return cr_chromosomes_img #return images
 
-
+#create some data, coeff
 chromosomes_amount = 150
-genes_amount = 100
+genes_amount = 200
 new_child_amount = 90 # n*2
 iter = 1000000000
 
 prob_of_change = 5
-max_size = 20
-min_size = 10
-pixs = 225
+max_size = 10
+min_size = 5
+pixs = 100
 
 chromosomes = []
 output_chromosomes_img = []
 
 #read input image
-path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/genetic_algorithm/images/img_04.png'
+path = r'/Users/idel_isbaev/PycharmProjects/IAI_ass/genetic_algorithm/images/img_13.png'
 input_image = cv.imread(path)
+input_image = cv.resize(input_image, (pixs,pixs))
 
 #print input image as plot
 plt.subplot(121)
