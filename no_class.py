@@ -137,8 +137,8 @@ new_child_amount = 90 # n*2
 iter = 1000000000
 
 prob_of_change = 5
-max_size = 20
-min_size = 10
+max_size = 50
+min_size = 20
 pixs = 512
 
 chromosomes = []
