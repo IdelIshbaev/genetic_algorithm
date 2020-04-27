@@ -139,7 +139,7 @@ iter = 1000000000
 prob_of_change = 5
 max_size = 20
 min_size = 10
-pixs = 225
+pixs = 512
 
 chromosomes = []
 output_chromosomes_img = []
